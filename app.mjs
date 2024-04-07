@@ -1,18 +1,14 @@
-const btnEl = document.querySelector('.btn');
+//Initial References
+let movieNameRef = document.getElementById("movie-name");
+let searchBtn = document.getElementById("search-btn");
+let result = document.getElementById("result");
 
-const clickHandler = async () => {
-    try {
-        const res = await fetch('https://www.freetogame.com/api/games');
-        const data = await res.json();
-
-        if(!res.ok) {
-            console.log(data.description);
-            return;
-        }
-        console.log(data.data[3].first_name);
-    } catch (error) {
-        console.log(error);
-    }
-};
-
-btnEl.addEventListener('click', clickHandler);
+//Function to fetch data from API
+let getMovie = () => {
+  let movieName = movieNameRef.value;
+  let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${API_KEY}`;
+  //If input field is empty
+  if (movieName.length <= 0) {
+    result.innerHTML = `<h3 class="msg">Please Enter A Movie Name</h3>`;
+  }
+}
