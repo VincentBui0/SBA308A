@@ -6,7 +6,7 @@
 }
 body {
   height: 100vh;
-  background: linear-gradient(#000000 50%, #ffb92a 50%);
+  background: linear-gradient(#ff0000 50%, #671199 50%);
 }
 .container {
   font-size: 16px;
@@ -42,7 +42,7 @@ body {
   border-color: #ffffff;
 }
 .search-container button {
-  background-color: #ffb92a;
+  background-color: #eeff00;
   border: none;
   cursor: pointer;
 }
@@ -109,7 +109,7 @@ p {
   font-weight: 300;
   line-height: 1.8em;
   text-align: justify;
-  color: #a0a0a0;
+  color: #ffffff;
 }
 .msg {
   text-align: center;
